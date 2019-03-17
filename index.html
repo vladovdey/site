@@ -55,7 +55,8 @@
 				<div class="col-3 navmenu__phone align-self-end">
 					<div class="row justify-content-center">
 						<span>+7 963 398 4731</span>
-						<a href="">Заказать звонок</a>
+						<div id="callback">Заказать звонок</div>
+						
 					</div>
 				</div>
 			</div>
@@ -63,7 +64,7 @@
 		</div>
 		<!-- /.container -->
 
-		<div class="container header_content">
+		<div class="container-fluid header_content">
 			<div class="row ">
 				<div class="col header_content__text">
 					<h1>Пленка с измен<span class="modified-text">яемой</span> <br> прозрачностью</h1>
@@ -73,20 +74,63 @@
 				<div class="col header_content__img">
 					<div class="row justify-content-end">
 						<div class="col-5"></div>
-						<img src="./img/header_img.jpg" alt="glass">
+						<img src="./img/header_img.jpg" alt="glass" class="header_content__img-on">
+						<img src="./img/header_toner-img.jpg" alt="tonned_glass" class="header_content__img-off">
 					</div>
 
 				</div>
 			</div>
 
 			<div class="row header_content__button justify-content-center">
-				<img src="./img/switcher-toggled.png" alt="" class="switcher off">
-				<img src="./img/switcher.png" alt="" class="switcher on">
+				<div class="col-1 header_content__button___img">
+					<img src="./img/switcher-toggled.png" alt="" class="switcher off">
+					<img src="./img/switcher.png" alt="" class="switcher on">
+
+				</div>
+				<!-- <div class="col-1"> -->
+				<div class="col-2 header_content__button___popup">
+					<p>Попробуй</p>
+				</div>
+				<!-- </div> -->
 			</div>
+
+			<!-- <div class="row">
+				<div class="col-2 header_content__button___popup">
+					<p>Попробуй</p>
+				</div>
+			</div> -->
+
 		</div>
 
+		<div class="contact_us">
+			<div class="contact_us__body">
+				<div class="contact_us__body___close">
+					<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+					 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<line x1="18" y1="6" x2="6" y2="18"></line>
+						<line x1="6" y1="6" x2="18" y2="18"></line>
+					</svg>
+				</div>
+				<h1>Обратный звонок</h1>
+				<div class="contact_us__body___form">
+					<form action="" class="form">
+						<p><label for="name">Имя</label></p>
+						<input type="text" name="name" id="name" placeholder="Введите имя">
+						<p><label for="name">Телефон</label></p>
+						<input type="text" name="phone" id="phone" placeholder="Ваш телефон">
+						<button class="button">Заказать звонок</button>
+					</form>
+				</div>
+
+				<div class="contact_us__body___agree">
+					<p>Нажимая на кнопку <br> Заказать звонок”, я даю согласие <br> на обработку моих персональных данных.</p>
+				</div>
+			</div>
+		</div>
 	</header>
 	<!-- /.header -->
+
+
 
 	<section class="about-business">
 		<div class="container-fluid">
@@ -95,7 +139,7 @@
 				<h1>Почему этот бизнес <br> вам подходит </h1>
 			</div>
 
-			<div class="row carousel">
+			<!-- <div class="row carousel">
 				<div class="col carousel-block">
 					<img src="./img/corusel-box.png" alt="">
 					<p>Уникальный товар.
@@ -127,7 +171,7 @@
 					<img src="" alt="">
 					<p></p>
 				</div>
-			</div>
+			</div> -->
 
 			<div class="row arrows justify-content-center">
 				<a class="arrow arrow-left"></a>
@@ -140,12 +184,11 @@
 	<section class="before-after">
 		<div class="container">
 			<div class="row">
-				<div class="element">
-					<img class="element__before" src="./img/before.jpg" alt="">
-				</div>
-
-				<div class="element">
-					<img class="element__after" src="./img/after.jpg" alt="">
+				<div class="col-12">
+					<div class="twentytwenty-container">
+						<img src="./img/before.jpg" />
+						<img src="./img/after.jpg" />
+					</div>
 				</div>
 			</div>
 		</div>
@@ -164,12 +207,12 @@
 				<div class="row justify-content-center">
 
 					<div class="col-auto name">
-						<label for="name">Имя</label>
+						<p><label for="name">Имя</label></p>
 						<input type="text" name="name" id="name" placeholder="Введите имя">
 					</div>
 
 					<div class="col-auto phone">
-						<label for="phone">Телефон</label>
+						<p><label for="phone">Телефон</label></p>
 						<input type="text" name="phone" id="phone" placeholder="Ваш телефон">
 					</div>
 
@@ -279,33 +322,42 @@
 	<!-- /.about-us -->
 
 	<section class="video-slider">
-		<div class="row justify-content-center">
-			<div class="video">
-				<img src="./img/video-ex.png" alt="">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="video">
+					<img src="./img/video-ex.png" alt="">
+				</div>
 			</div>
-		</div>
 
-		<div class="row arrows justify-content-center">
-			<a class="arrow arrow-left"></a>
-			<a class="arrow arrow-right"></a>
+			<div class="row arrows justify-content-center">
+				<a class="arrow arrow-left"></a>
+				<a class="arrow arrow-right"></a>
+			</div>
 		</div>
 	</section>
 	<!-- /.video-slider -->
 
 	<section class="toning">
 		<div class="container">
-			<div class="row justify-content-center">
-				<div class=""></div>
-				<img class="toner" src="./img/truck-toner.jpg" alt="">
-				<img class="not-toner" src="./img/truck-not-toner.jpg" alt="">
+			<div class="toning-setting">
+				<p>Настройка прозрачности</p>
+				<input type="range" name="toning_range" id="toning_range" value="0">
+				<!-- <span class="toning-setting_switcher"></span>
+				<div class="toning-setting_strip "></div> -->
 			</div>
+			<div class="row justify-content-center">
+
+				<img class="truck toner" src="./img/truck-toner.jpg" alt="">
+				<img class="truck toner-not" src="./img/truck-not-toner.jpg" alt="">
+			</div>
+
 		</div>
-		</div>
+
 	</section>
 	<!-- /.toning -->
 
 	<section class="clients">
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row clients_header justify-content-center">
 				<h1>Ваши клиенты</h1>
 			</div>
@@ -411,25 +463,42 @@
 	</section>
 
 	<footer class="footer">
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row footer_text justify-content-center">
 				<h1>Не откладывай на потом,<br> начни бизнес уже сегодня </h1>
 			</div>
 			<div class="row footer_button justify-content-center">
 				<button class="button">Получите бесплатную консультацию</button>
 			</div>
-			<div class="row justify-content-end">
-				<!-- <div class="">
-					<span>+7 963 398 4731</span>
+			<div class="row footer-callback">
+				<div class="col-6 footer-callback__mail">
+					<a href="mailto:TOP-MARKET-06@yandex.ru">TOP-MARKET-06@yandex.ru</a>
+					<p>Режим работы 10:00 - 19:00</p>
+				</div>
+				<div class="col-6 footer-callback__phone ">
+					<p>+7 963 398 4731</p>
 					<a href="">Заказать звонок</a>
-				</div> -->
+				</div>
 
+			</div>
+			<div class="row footer-policy justify-content-center">
+				<div class="footer-policy__adress">
+					<p>Юридический адрес: республика <br> Ингушетия,г.Назрань,ул.Муталиева <br> 12/2,оф.№19 </p>
+				</div>
+				<div class="footer-policy__policy">
+					<a href="">Политика конфиденциальности</a>
+					<p>Сбербанк 4276 5600 2429 0456 <br> Экажев Магомед Аюпович</p>
+				</div>
+				<div class="footer-policy__inn">
+					<p>ИНН: 0608049828 <br> КПП: 060801001 <br> ОГРН: 1180608002288 </p>
+				</div>
 			</div>
 		</div>
 	</footer>
 
 	<script src="js/scripts.min.js"></script>
-
+	<script src="./libs/jquery/dist/jquery.event.move.js"></script>
+	<script src="./libs/jquery/dist/jquery.twentytwenty.js"></script>
 </body>
 
 </html>
