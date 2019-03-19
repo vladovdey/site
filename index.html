@@ -23,16 +23,20 @@
 	<!-- Custom Browsers Color End -->
 
 	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" type="text/css" href="./libs/slick/slick.css" />
+	<!-- <link rel="stylesheet" type="text/css" href="./libs/slick/slick-theme.css" /> -->
 
 </head>
 
 <body>
-
+		<div id="preloader">
+				<div id="status">&nbsp;</div>
+		</div>
 	<!-- Custom HTML -->
 
 	<header class="header">
 
-		<div class="container navmenu">
+		<div class="container-fluid navmenu">
 			<div class="row justify-content-center">
 				<div class="col-2 navmenu__logo align-self-start">
 					<div class="row justify-content-end">
@@ -40,24 +44,23 @@
 					</div>
 				</div>
 
-				<div class="col-7 navmenu__menu align-self-center">
+				<div class="col-sm-6 navmenu__menu align-self-center">
 
 					<div class="row">
 						<div class="col-auto navmenu__menu_items">
 							<a class="menu_items__item" href="">Главная</a>
-							<a class="menu_items__item" href="">О нас</a>
-							<a class="menu_items__item" href="">Заявка</a>
-							<a class="menu_items__item" href="">Видео</a>
+							<a class="menu_items__item" href="#ab-us">О нас</a>
+							<a class="menu_items__item" href="#frm">Заявка</a>
+							<a class="menu_items__item" href="#video">Видео</a>
 						</div>
 					</div>
 
 				</div>
-				<div class="col-3 navmenu__phone align-self-end">
-					<div class="row justify-content-center">
-						<span>+7 963 398 4731</span>
+				<div class="col-sm-4 navmenu__phone align-self-center">
+					<div class="navmenu__phone___numbers"><span>+7 963 398 4731</span>
 						<div id="callback">Заказать звонок</div>
-						
 					</div>
+
 				</div>
 			</div>
 			<!-- /.row -->
@@ -66,11 +69,12 @@
 
 		<div class="container-fluid header_content">
 			<div class="row ">
-				<div class="col header_content__text">
+				<div class="header_content__text">
 					<h1>Пленка с измен<span class="modified-text">яемой</span> <br> прозрачностью</h1>
 					<p>Мы ищем дистрибьюторов нашей <br> продукции в всех регионах России</p>
-					<button class="button">Заказать консультацию</button>
+					<button class="button" id="callback">Заказать консультацию</button>
 				</div>
+
 				<div class="col header_content__img">
 					<div class="row justify-content-end">
 						<div class="col-5"></div>
@@ -81,7 +85,7 @@
 				</div>
 			</div>
 
-			<div class="row header_content__button justify-content-center">
+			<div class="row header_content__button">
 				<div class="col-1 header_content__button___img">
 					<img src="./img/switcher-toggled.png" alt="" class="switcher off">
 					<img src="./img/switcher.png" alt="" class="switcher on">
@@ -101,6 +105,7 @@
 			</div> -->
 
 		</div>
+		
 
 		<div class="contact_us">
 			<div class="contact_us__body">
@@ -113,7 +118,12 @@
 				</div>
 				<h1>Обратный звонок</h1>
 				<div class="contact_us__body___form">
-					<form action="" class="form">
+					<form class="form" method="POST">
+						<!-- Hidden Required Fields -->
+						<input type="hidden" name="project_name" value="Site Name">
+						<input type="hidden" name="admin_email" value="petya.petrenko.7878@mail.ru">
+						<input type="hidden" name="form_subject" value="Form Subject">
+						<!-- END Hidden Required Fields -->
 						<p><label for="name">Имя</label></p>
 						<input type="text" name="name" id="name" placeholder="Введите имя">
 						<p><label for="name">Телефон</label></p>
@@ -130,8 +140,6 @@
 	</header>
 	<!-- /.header -->
 
-
-
 	<section class="about-business">
 		<div class="container-fluid">
 
@@ -139,63 +147,60 @@
 				<h1>Почему этот бизнес <br> вам подходит </h1>
 			</div>
 
-			<!-- <div class="row carousel">
-				<div class="col carousel-block">
+			<div class="about-business_carousel">
+				<div class="col-1 about-business_carousel-block">
 					<img src="./img/corusel-box.png" alt="">
-					<p>Уникальный товар.
-						Не имеет
-						полноценных
-						аналогов. </p>
+					<p>Уникальный товар. <br>Не имеет <br> полноценных <br> аналогов</p>
 				</div>
-				<div class="col carousel-block">
-					<img src="" alt="">
-					<p></p>
+				<div class="col-1 about-business_carousel-block">
+					<img src="./img/corusel-support.png" alt="">
+					<p>Есть вау эффект</p>
 				</div>
-				<div class="col carousel-block">
-					<img src="" alt="">
-					<p></p>
+				<div class="col-1 about-business_carousel-block">
+					<img src="./img/corusel-magic.png" alt="">
+					<p>Возможность реализовывать как в розницу, так и оптом</p>
 				</div>
-				<div class="col carousel-block">
-					<img src="" alt="">
-					<p></p>
+				<div class="col-1 about-business_carousel-block">
+					<img src="./img/corusel-community.png" alt="">
+					<p>Возможность реализовывать как в розницу, так и оптом</p>
 				</div>
-				<div class="col carousel-block">
-					<img src="" alt="">
-					<p></p>
+				<div class="col-1 about-business_carousel-block">
+					<img src="./img/corusel-document.png" alt="">
+					<p>Имеет полноценную сертификацию</p>
 				</div>
-				<div class="col carousel-block">
-					<img src="" alt="">
-					<p></p>
+				<div class="col-1 about-business_carousel-block">
+					<img src="./img/corusel-fast.png" alt="">
+					<p>Цикл сделки - быстрый</p>
 				</div>
-				<div class="col carousel-block">
-					<img src="" alt="">
-					<p></p>
+				<div class="col-1 about-business_carousel-block">
+					<img src="./img/corusel-money.png" alt="">
+					<p>Продукт просто применять, не требуется дополнительных знаний</p>
 				</div>
-			</div> -->
-
+			</div>
 			<div class="row arrows justify-content-center">
-				<a class="arrow arrow-left"></a>
-				<a class="arrow arrow-right"></a>
+				<button class='btn_arrow about-business_prev' id='prev'></button>
+				<button class='btn_arrow about-business_next' id='next'></button>
 			</div>
 		</div>
 	</section>
 	<!-- /.about-busines -->
 
 	<section class="before-after">
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12">
 					<div class="twentytwenty-container">
-						<img src="./img/before.jpg" />
-						<img src="./img/after.jpg" />
+						<img src="./img/before.jpg" width="100%" />
+						<img src="./img/after.jpg" width="100%" />
 					</div>
 				</div>
+
 			</div>
 		</div>
 	</section>
 	<!-- /.before-after -->
 
-	<section class="form">
+	<section class="form" id="frm">
 		<div class="container-fluid">
 			<div class="row text justify-content-center">
 				<div class="col-">
@@ -203,7 +208,12 @@
 				</div>
 			</div>
 
-			<form action="">
+			<form method="POST">
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="project_name" value="Site Name">
+				<input type="hidden" name="admin_email" value="admin@mail.com">
+				<input type="hidden" name="form_subject" value="Form Subject">
+				<!-- END Hidden Required Fields -->
 				<div class="row justify-content-center">
 
 					<div class="col-auto name">
@@ -230,7 +240,7 @@
 	</section>
 	<!-- /.form -->
 
-	<section class="about-us">
+	<section class="about-us" id="ab-us">
 		<div class="container-fluid">
 
 			<div class="row about-us_header justify-content-center">
@@ -321,18 +331,28 @@
 	</section>
 	<!-- /.about-us -->
 
-	<section class="video-slider">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="video">
-					<img src="./img/video-ex.png" alt="">
+	<section class="video-slider" id="video">
+		<div class="container-fluid video-slider__content">
+			<div id="carousel">
+				<div class="prev">
+					<img src="./img/video-ex.png">
 				</div>
+
+				<div class="selected">
+					<img src="./img/video-ex.png">
+				</div>
+
+				<div class="next">
+					<img src="./img/video-ex.png">
+				</div>
+
 			</div>
 
-			<div class="row arrows justify-content-center">
-				<a class="arrow arrow-left"></a>
-				<a class="arrow arrow-right"></a>
+			<div class="buttons">
+				<button class="btn_arrow vid_prev" id="prev"></button>
+				<button class="btn_arrow vid_next" id="next"></button>
 			</div>
+
 		</div>
 	</section>
 	<!-- /.video-slider -->
@@ -374,7 +394,7 @@
 						<li>Офисы</li>
 						<li>Дизайнеры интерьеров</li>
 						<li>Автовладельцы</li>
-						<li>Автовладельцы </li>
+						<li>Строительные компании </li>
 						<li>Автосервисы</li>
 						<li>Производители стекол</li>
 				</div>
@@ -400,7 +420,7 @@
 	<section class="clients-button">
 		<div class="container">
 			<div class="row justify-content-center">
-				<button class="button">Оставить заявку</button>
+				<button class="button" id="callback">Оставить заявку</button>
 			</div>
 		</div>
 	</section>
@@ -412,37 +432,34 @@
 				<h1>Наши примеры работ</h1>
 			</div>
 
-			<div class="row carousel">
-				<div class="col-4 carousel-block">
-					<img src="./img/corusel-box.png" alt="">
+			<div class="examples-slider_carousel">
+				<div class="col-1 examples-slider_carousel__block">
+					<img src="./img/example-carousel-office-ton.jpg" alt="">
 				</div>
-				<div class="col-4 carousel-block">
-					<img src="" alt="">
 
+				<div class="col-1 examples-slider_carousel__block">
+					<img src="./img/example-carousel-office-not.jpg" alt="">
 				</div>
-				<div class="col carousel-block">
-					<img src="" alt="">
 
+				<div class="col-1 examples-slider_carousel__block">
+					<img src="./img/example-carousel-room-ton.jpg" alt="">
 				</div>
-				<div class="col carousel-block">
-					<img src="" alt="">
 
+				<div class="col-1 examples-slider_carousel__block">
+					<img src="./img/example-carousel-room-not.jpg" alt="">
 				</div>
-				<div class="col carousel-block">
-					<img src="" alt="">
 
+				<div class="col-1 examples-slider_carousel__block">
+					<img src="./img/example-carousel-cafe-not.jpg" alt="">
 				</div>
-				<div class="col carousel-block">
-					<img src="" alt="">
-				</div>
-				<div class="col carousel-block">
-					<img src="" alt="">
+
+				<div class="col-1 examples-slider_carousel__block">
+					<img src="./img/example-carousel-cafe-not.jpg" alt="">
 				</div>
 			</div>
-
 			<div class="row arrows justify-content-center">
-				<a class="arrow arrow-left"></a>
-				<a class="arrow arrow-right"></a>
+				<button class='btn_arrow examples_btn_prev' id='prev'></button>
+				<button class='btn_arrow examples_btn_next' id='next'></button>
 			</div>
 		</div>
 	</section>
@@ -468,7 +485,7 @@
 				<h1>Не откладывай на потом,<br> начни бизнес уже сегодня </h1>
 			</div>
 			<div class="row footer_button justify-content-center">
-				<button class="button">Получите бесплатную консультацию</button>
+				<button class="button" id="callback">Получите бесплатную консультацию</button>
 			</div>
 			<div class="row footer-callback">
 				<div class="col-6 footer-callback__mail">
@@ -477,7 +494,7 @@
 				</div>
 				<div class="col-6 footer-callback__phone ">
 					<p>+7 963 398 4731</p>
-					<a href="">Заказать звонок</a>
+					<a href="" id="callback">Заказать звонок</a>
 				</div>
 
 			</div>
@@ -499,6 +516,7 @@
 	<script src="js/scripts.min.js"></script>
 	<script src="./libs/jquery/dist/jquery.event.move.js"></script>
 	<script src="./libs/jquery/dist/jquery.twentytwenty.js"></script>
+	<script type="text/javascript" src="./libs/slick/slick.min.js"></script>
 </body>
 
 </html>
