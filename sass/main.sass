@@ -113,11 +113,16 @@ button::-moz-focus-inner
 			left: 50%
 			background-color: $blue
 			width: 450px
-			// height: 500px
 			transform: translateX(-50%) translateY(-50%)
 			&___close
 				text-align: right
 				cursor: pointer
+			&___text
+				text-align: center
+				& p
+					font-family: $reg
+					font-size: 17px
+					padding-bottom: 10px
 			&___agree
 				font-family: $blak
 				text-align: center
@@ -137,20 +142,31 @@ button::-moz-focus-inner
 				& p
 					font-size: 20px
 					text-align: left
-					margin-left: 75px
+					margin-left: 92px
 					margin-bottom: 0px
 				& input
 					text-align: center
-					width: 300px
+					width: 260px
 					margin: 0px 0px 20px 0px
-
+					@include placeholder
+						text-align: center
+						font-family: $ital
+						font-size: 24px
 			& h1
 				text-align: center
 				font-size: 45px
+//.header
 .navmenu
+	&__logo
+		& .row
+			-webkit-box-pack: end
+			-webkit-justify-content: flex-end
+			-ms-flex-pack: end
+			justify-content: flex-end
 	& img
 		height: 65px
 		width: 128px
+		margin-left: 96px
 	&__menu 
 		font-size: 32px
 		font-family: $lig
@@ -162,8 +178,6 @@ button::-moz-focus-inner
 				text-decoration: none
 				&:hover
 					border-bottom: 3px $blue solid
-				&:first-child
-					margin-left: 75px
 	&__phone
 		font-size: 28px
 		font-family: $bolder
@@ -179,7 +193,7 @@ button::-moz-focus-inner
 		&___numbers
 			text-align: right
 			margin-right: 24px
-
+//navmenu
 .arrows 
 	padding-top: 30px
 	text-align: center
@@ -200,7 +214,7 @@ button::-moz-focus-inner
 			cursor: pointer
 			box-shadow: 2px -2px 0 2px white inset
 			-webkit-box-shadow: 4px -4px white inset
-
+//arrows
 .button
 	background: $blue
 	height: 106px
@@ -214,13 +228,13 @@ button::-moz-focus-inner
 	font-family: $bolder
 	&:hover
 		cursor: pointer
-
+//button
 .header_content
 	height: 734px
 	&__text
 		padding-top: 152px
 		padding-left: 107px
-		position: absolute
+		
 		z-index: 2
 		& h1
 			font-family: $bolder
@@ -243,6 +257,7 @@ button::-moz-focus-inner
 		padding-top: 71px
 		padding-right: 50px
 		z-index: 1
+
 		& img
 			height: 505px
 			width: 690px
@@ -270,13 +285,13 @@ button::-moz-focus-inner
 			margin-left: 11%
 			& p
 				margin: auto
-//header
-	
+//header	
 .about-business
 	position: relative
 	background-color: $blue
 	& .business-text
 		padding-top: 49px
+		padding-bottom: 35px
 		text-align: center
 		color: white
 		font-size: 46px
@@ -306,10 +321,11 @@ button::-moz-focus-inner
 				
 	& .slick-slide
 		height: 270px
-
 //about-business
 
 .before-after
+	.col-12
+		padding: 0px 0px
 	& .element
 		position: absolute
 		&__after
@@ -323,8 +339,11 @@ button::-moz-focus-inner
 		font-family: $bolder
 		font-size: 46px
 		padding-top: 40px
+		text-align: center
 	& form
-		margin: 40px 0px	
+		margin: 40px 0px
+		& .row
+			margin-left: 9%	
 		& button
 			margin-top: 24px
 			border: solid 4.96px #ffffff
@@ -342,7 +361,7 @@ button::-moz-focus-inner
 		font-size: 28.208px
 		line-height: 2.954
 		padding-bottom: 30px
-
+		text-align: center
 //form
 
 .about-us
@@ -352,11 +371,13 @@ button::-moz-focus-inner
 			font-family: $bolder
 			font-size: 46px
 			line-height: 0.896
+			text-align: center
 
 	&_content
 		margin-top: 34px
 		&__text
 			padding-left: 50px
+			text-align: center
 			& h2
 				font-family: $reg
 				font-size: 46px
@@ -394,10 +415,12 @@ button::-moz-focus-inner
 
 .video-slider
 	padding-top: 100px
+	& #selected_movie
+		height: 315px
 	&__content
 		#carousel
 			position: relative
-			height: 300px
+			height: 400px
 			overflow: hidden
 
 		div
@@ -413,30 +436,22 @@ button::-moz-focus-inner
 			left: 0%
 			opacity: 0
 			transform: translateY(50%) translateX(-50%)
-			img
-				width: 200px
 
 		& .hideRight
 			left: 100%
 			opacity: 0
 			transform: translateY(50%) translateX(-50%)
-			img
-				width: 200px
 
 		& .prev
 			z-index: 5
 			left: 30%
 			transform: translateY(50px) translateX(-50%)
-			img
-				width: 300px
 
 		& .prevLeftSecond
 			z-index: 4
 			left: 15%
 			transform: translateY(50%) translateX(-50%)
 			opacity: .7
-			img
-				width: 200px
 
 		& .selected
 			z-index: 10
@@ -447,22 +462,17 @@ button::-moz-focus-inner
 			z-index: 5
 			left: 70%
 			transform: translateY(50px) translateX(-50%)
-			img
-				width: 300px
 
 		& .nextRightSecond
 			z-index: 4
 			left: 85%
 			transform: translateY(50%) translateX(-50%)
 			opacity: .7
-			img
-				width: 200px
 				
 		.buttons
 			position: relative
 			text-align: center
 			padding-bottom: 40px
-
 //video-slider
 
 .toning
@@ -481,6 +491,14 @@ button::-moz-focus-inner
 		font-size: 19.414px
 		z-index: 4
 		padding-top: 24px
+		& .white_strip
+			position: absolute
+			background-color: #fff
+			height: 10px
+			margin-left: 16px
+			border-radius: 15px
+			bottom: 21px
+			
 		input
 			width: 258px
 			height: 10px
@@ -491,7 +509,6 @@ button::-moz-focus-inner
 			border-radius: 15px
 			border: 3px solid #fff
 			border-left: none
-			border-right: 1px solid #fff
 			background-color: #000
 			&::-webkit-slider-thumb
 				-webkit-appearance: none
@@ -499,16 +516,13 @@ button::-moz-focus-inner
 				height: 20px
 				background-color: #fff
 				border-radius: 50%
+				
 			&::-moz-range-thumb
 				-moz-appearance: none
 				width: 20px
 				height: 20px
 				background-color: #fff
 				border-radius: 50%
-			&::-ms-fill-lower
-				background: #60cd18
-			&::-webkit-progress-value 
-				background-color: #fff
 	& span
 		position: absolute
 		border-radius: 100%
@@ -520,8 +534,8 @@ button::-moz-focus-inner
 		height: 20px
 		width: 20px
 		cursor: pointer	
-	& .truck
-		width: 1200px
+	& .col-12
+		padding: 0
 	& .toner
 		position: absolute
 		z-index: 2
@@ -557,7 +571,9 @@ button::-moz-focus-inner
 	padding: 60px 0px
 	& button
 		text-transform: none
-		font-size: 55px
+		font-size: 38px
+		height: 80px
+		width: 380px
 		font-family: $bolder
 //clients-button
 
@@ -588,12 +604,48 @@ button::-moz-focus-inner
 //examples-slider
 	
 .sertificats
+	text-align: center
 	font-size: 46px
 	font-family: $bolder
 	font-weight: 1200
 	& .sertificats_img
 		padding-bottom: 90px
+		& img
+			
+			height:	380px
+			width: 270px
+			z-index: 10
+		& .item:hover
+				
+				z-index: 10
+				transform: scale(1.8)
+				transition: 1.2s
 //sertificats
+
+.prices
+	color: #fff
+	font-family: $lig
+	font-size: 30px
+	& .container-fluid
+		background-color: $blue
+	&_header
+		font-family: $bolder
+		text-align: center
+		padding-bottom: 40px
+		& h1
+			font-size: 69px
+	&_rubles
+		padding-left: 15%
+	&_text
+		padding-right: 18%
+		& .text
+			
+			padding-bottom: 15px
+		& p
+			line-height: 1.3
+			text-align: center
+//prices
+
 .footer
 	background-image: url('../img/footer-img.jpg')
 	background-repeat: no-repeat
@@ -607,9 +659,10 @@ button::-moz-focus-inner
 		color: #ffffff
 		padding: 155px 0px
 	& .button
-		width: 665px
+		width: 600px
 		font-size: 24px
 		padding: 0px 0px
+		height: 80px
 	&-callback
 		color: #fff
 		font-size: 20px
@@ -630,9 +683,10 @@ button::-moz-focus-inner
 			& p
 				font-family: $bolder
 				font-size: 25px
-			& a
+			& #callback
 				font-family: $lig
 				font-size: 20px
+				cursor: pointer
 	
 	&-policy
 		background-color: $blue
@@ -641,6 +695,8 @@ button::-moz-focus-inner
 		font-size: 18px
 		line-height: 1.301
 		padding-top: 40px
+		padding-left: 15px
+		padding-right: 15px
 		&__policy
 			margin-left: auto
 			margin-right: auto
@@ -654,6 +710,38 @@ button::-moz-focus-inner
 				padding-top: 27px
 		&__inn
 			text-align: right
+	&-requisites
+		padding-left: 0px
+		line-height: 0.7
+		font-size: 20px
+		& p
+			margin-bottom: 10px
 			
-
+.content
+	margin-top: 20px
+	background-color: $blue
+	color: #fff
+	text-align: center
+	font-family: $reg
+	&_text
+		padding: 100px 0px 80px 0px
+		line-height: 1.387
+		& h1
+			font-size: 76px
+		& h3
+			font-size: 44px
+	&_socials
+		border: 6px solid #fff
+		border-radius: 20px
+		margin: 20px 0px 40px 0px
+		padding: 20px 0px 10px 0px
+		&__items
+			padding-right: 20px
+		&__thx
+			font-size: 20px
+			position: absolute
+			z-index: 4
+			left: 23%
+			bottom: 94%
+			background: $blue
 @import "media" // Always at the end
